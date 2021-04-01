@@ -31,7 +31,7 @@ new NullSpec<decimal>()
 
 ```
 As a result, a tree will be formed in which we can lower _not_ to leaves using de Morgan's law, and then apply negation to the specification, which is why we use ```SpecCondition``` implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
-_Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)_
+>_Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)_
 #### ```Replace``` the specification base if it does not suit you, or if you want to bring several specifications to the same base for the purpose of their further combination
 ```csharp
 new FormulaParsedSpec()
