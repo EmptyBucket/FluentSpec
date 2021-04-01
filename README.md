@@ -9,7 +9,7 @@
 6) Getting a detailed description of the specification violation
 
 ## Defining your own specifications
-```
+```csharp
 public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 {
 	public override bool IsSatisfiedBy(ParseTreeNode value) =>
@@ -20,7 +20,7 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 ```
 "must" and "must_not" are special reserved words that you must use when implicitly using "MustSpecConfition"
 ## Combining specifications
-```
+```csharp
 new NullSpec<decimal>()
 	.Or(new MinSpec<decimal>(0)
 		.And(new MaxSpec<decimal>(100))
@@ -40,7 +40,7 @@ Value must not be null and (Value must inferior 0 or Value must exceed 100 or Va
 		* TargetResult
 * Something other
 #### Declarative description of the rules for the "Matrix" entity:
-```
+```csharp
 Specs
 	.For<Matrix>()
 	.Nested(b => b.To(m => m.SmartTasks), Specs
@@ -59,7 +59,7 @@ Specs
 
 ```
 ## Getting a declaration - a list of rules
-```
+```csharp
 Specs
 	.For<Matrix>()
 	.Nested(m => m.To(ma => ma.SmartTasks), Specs
@@ -79,7 +79,7 @@ Specs
 We can do this in view of the fact that we define all the rules declaratively
 ## ASP.NET MVC and Swagger integration
 #### Connecting integration in your startup
-```
+```csharp
 public class Startup
 {
 	public void ConfigureServices(IServiceCollection services)
@@ -104,7 +104,7 @@ public class Startup
 }
 ```
 #### Comparison of errors and their codes (All specs built into the library are already mapped into native codes)
-```
+```csharp
 SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMapBuilder
 	.StartFrom(10, b => b
 		.Add(typeof(FalseSpec))
