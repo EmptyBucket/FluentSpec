@@ -4,7 +4,7 @@
 1) Save the specifications in the most canonical form, which was described in DDD
 2) Ability to combine specifications using unions and, or and apply negation not to them
 3) Provide fluent api to describe aggregate rules
-4) Obtaining a complete list of rules for the aggregate in the form of text (we can do this in view of the fact that we define all the rules declaratively)
+4) Obtaining a complete list of rules for the aggregate in the form of text
 5) Integration with frameworks
 6) Getting a detailed description of the specification violation
 
@@ -59,6 +59,7 @@ Specs
 
 ```
 ## Getting a declaration - a list of rules
+We can do this in view of the fact that we define all the rules declaratively
 ```
 Specs
 	.For<Matrix>()
