@@ -40,7 +40,7 @@ __Value must not be null and (Value must inferior 0 or Value must exceed 100 or 
 		* __Weight__
 		* __Name__
 		* __TargetResult__
-* Something other
+* __Something other__
 #### Declarative description of the rules for the "Matrix" entity:
 ```csharp
 Specs
