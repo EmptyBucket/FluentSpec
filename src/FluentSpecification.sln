@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification", "FluentSpecification\FluentSpecification.csproj", "{32D9D604-8EF9-4884-8953-ECAFB711BA58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification.AspNet", "FluentSpecification.AspNet\FluentSpecification.AspNet.csproj", "{055786D1-ED18-46CC-B571-FA0331AE2AC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification.Swagger", "FluentSpecification.Swagger\FluentSpecification.Swagger.csproj", "{66D65DFA-8075-49DB-BD0B-E1D80ED10B90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32D9D604-8EF9-4884-8953-ECAFB711BA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D9D604-8EF9-4884-8953-ECAFB711BA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D9D604-8EF9-4884-8953-ECAFB711BA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D9D604-8EF9-4884-8953-ECAFB711BA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055786D1-ED18-46CC-B571-FA0331AE2AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055786D1-ED18-46CC-B571-FA0331AE2AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055786D1-ED18-46CC-B571-FA0331AE2AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055786D1-ED18-46CC-B571-FA0331AE2AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D65DFA-8075-49DB-BD0B-E1D80ED10B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D65DFA-8075-49DB-BD0B-E1D80ED10B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D65DFA-8075-49DB-BD0B-E1D80ED10B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D65DFA-8075-49DB-BD0B-E1D80ED10B90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
