@@ -19,7 +19,7 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 	public override SpecCondition IsSatisfiedOn => $"Depth {must_not} exceed 64";
 }
 ```
-"must" and "must_not" are special reserved words that you must use when implicitly using "MustSpecConfition"
+"must" and "must_not" are special reserved words that you must use when implicitly using "MustSpecConfition" or use explicit "PredefinedSpecCondition", where you explicitly negate the string literal
 ## Combining specifications
 #### Combine specifications using unions and, or and apply negation not to them
 ```csharp
@@ -30,7 +30,7 @@ new NullSpec<decimal>()
 	.Not()
 
 ```
-As a result, a tree is formed in which we can descend "not" to leaves, and then apply "not" to the string literal of the specification. Therefore, within your specifications, you must use an implicit "MustSpecCondition", which obliges to use "{must}" or "{must_not}" to invert it, or explicit "PredefinedSpecCondition", where you explicitly negate the string literal. You will receive a specification that will comply with:
+As a result, a tree will be formed in which we can lower "not" to leaves using de Morgan's law, and then apply negation to the specification, which is why we use SpecCondition implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
 
 Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
 ## Description of aggregate rules
