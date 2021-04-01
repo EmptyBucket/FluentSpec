@@ -21,7 +21,7 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 ```
 "must" and "must_not" are special reserved words that you must use when implicitly using "MustSpecConfition" or use explicit "PredefinedSpecCondition", where you explicitly negate the string literal
 ## Combining specifications
-#### Combine specifications using unions and, or and apply negation not to them
+#### Combine specifications using unions "And", "Or" and apply negation "Not" to them
 ```csharp
 new NullSpec<decimal>()
 	.Or(new MinSpec<decimal>(0)
