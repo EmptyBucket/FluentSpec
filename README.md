@@ -40,7 +40,7 @@ new FormulaParsedSpec()
 	.And(new FormulaHasExistVariablesSpec(excelVariables))
 	.Replace<ParseTreeNode?, string>(ParseFormula);
 ```
-In this example, we have replaced __ISpec<ParseTreeNode>__ with __ISpec<string>__
+In this example, we have replaced ```ISpec<ParseTreeNode>``` with ```ISpec<string>```
 ## Description of aggregate rules
 #### Consider some root __Matrix__ with the following internal structure:
 * __Matrix__
