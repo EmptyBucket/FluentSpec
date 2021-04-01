@@ -90,6 +90,6 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 
 * specNodeId - error identifier
 * isSatisfiedOn - all the rules associated with the property
-* influenceOn is a broken rule
-* influenceValue The value that the rule did not pass
+* influenceOn - is a broken rule
+* influenceValue - the value that the rule did not pass
 * path - the path to the property inside the aggregate
