@@ -78,7 +78,7 @@ Specs
 ```
 We can do this in view of the fact that we define all the rules declaratively
 ## ASP.NET MVC and Swagger integration
-#### Connecting integration in your startup
+#### Connecting integration in your startup:
 ```csharp
 public class Startup
 {
@@ -103,7 +103,7 @@ public class Startup
 			.UseSwaggerUI(c => );
 }
 ```
-#### Comparison of errors and their codes (All specs built into the library are already mapped into native codes)
+#### Comparison of errors and their codes (All specs built into the library are already mapped into native codes):
 ```csharp
 SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMapBuilder
 	.StartFrom(10, b => b
