@@ -17,8 +17,8 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 
 	public override SpecCondition IsSatisfiedOn => $"Depth {must_not} exceed 64";
 }
-
 ```
+"must" and "must_not" are special reserved words that you must use when implicitly using MustSpecConfition
 ## Combining specifications
 ```
 new NullSpec<decimal>()
@@ -28,7 +28,7 @@ new NullSpec<decimal>()
 	.Not()
 
 ```
-As a result, a tree is formed in which we can descend not to leaves, and then apply not to the string literal of the specification, which is why you must use the implicit MustSpecCondition, which obliges to use {must} or {must_not} to invert it later, or explicit PredefinedSpecCondition, where you explicitly negate the string literal. You will receive a specification that will comply with:
+As a result, a tree is formed in which we can descend not to leaves, and then apply not to the string literal of the specification. Therefore, within your specifications, you must use an implicit MustSpecCondition, which obliges to use {must} or {must_not} to invert it, or explicit PredefinedSpecCondition, where you explicitly negate the string literal. You will receive a specification that will comply with:
 
 Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
 ## Description of aggregate rules
