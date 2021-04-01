@@ -19,9 +19,9 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 	public override SpecCondition IsSatisfiedOn => $"Depth {must_not} exceed 64";
 }
 ```
-__must__ and __must_not__ are special reserved words that you must use when implicitly using __MustSpecConfition__ or use explicit __PredefinedSpecCondition__, where you explicitly negate the string literal
+```must``` and ```must_not``` are special reserved words that you must use when implicitly using ```MustSpecConfition``` or use explicit ```PredefinedSpecCondition```, where you explicitly negate the string literal
 ## Combining specifications
-#### Combine specifications using unions __And__, __Or__ and apply negation __Not__ to them:
+#### Combine specifications using unions ```And```, ```Or``` and apply negation ```Not``` to them:
 ```csharp
 new NullSpec<decimal>()
 	.Or(new MinSpec<decimal>(0)
@@ -30,10 +30,10 @@ new NullSpec<decimal>()
 	.Not()
 
 ```
-As a result, a tree will be formed in which we can lower __not__ to leaves using de Morgan's law, and then apply negation to the specification, which is why we use __SpecCondition__ implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
+As a result, a tree will be formed in which we can lower ```not``` to leaves using de Morgan's law, and then apply negation to the specification, which is why we use ```SpecCondition``` implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
 __Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)__
-#### __Replace__ the specification base if it does not suit you, or if you want to bring several specifications to the same base for the purpose of their further combination
-```
+#### ```Replace``` the specification base if it does not suit you, or if you want to bring several specifications to the same base for the purpose of their further combination
+```csharp
 new FormulaParsedSpec()
 	.And(new FormulaMaxDepthSpec())
 	.And(new FormulaAllowedSpec())
@@ -42,7 +42,7 @@ new FormulaParsedSpec()
 ```
 In this example, we have replaced ```ISpec<ParseTreeNode>``` with ```ISpec<string>```
 ## Description of aggregate rules
-#### Consider some root __Matrix__ with the following internal structure:
+#### Consider some root ```Matrix``` with the following internal structure:
 * __Matrix__
 	* __SmartTasks__
 		* __Weight__
@@ -68,11 +68,11 @@ Specs
 	.ThrowIfNotSatisfied(matrix);
 
 ```
-* __For__ - grab context for T root
-* __Me__ - define a rule for the captured root
-* __Member__ - define the rule for the member of the captured root
-* __Nested__ - traverse the members of the captured root up to a certain nesting level
-* __ThrowIfNotSatisfied__ - throw an exception if at least one rule was violated for an entity
+* ```For``` - grab context for T root
+* ```Me``` - define a rule for the captured root
+* ```Member``` - define the rule for the member of the captured root
+* ```Nested``` - traverse the members of the captured root up to a certain nesting level
+* ```ThrowIfNotSatisfied``` - throw an exception if at least one rule was violated for an entity
 ## Getting a declaration - a list of rules
 ```csharp
 Specs
@@ -134,11 +134,11 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 #### Result of the broken rule for __Matrix.SmartTasks.Weight__:
 ![Result](https://i.imgur.com/oPbCRpT.jpg)
 
-* __specNodeId__ - error identifier
-* __isSatisfiedOn__ - all the rules associated with the property
-* __influenceOn__ - is a broken rule
-* __influenceValue__ - the value that the rule did not pass
-* __path__ - the path to the property inside the aggregate
+* ```specNodeId``` - error identifier
+* ```isSatisfiedOn``` - all the rules associated with the property
+* ```influenceOn``` - is a broken rule
+* ```influenceValue``` - the value that the rule did not pass
+* ```path``` - the path to the property inside the aggregate
 ### You can change the behavior of fundamental things using __SpecGlobalConfig__
 ## License
 
