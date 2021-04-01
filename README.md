@@ -31,8 +31,7 @@ new NullSpec<decimal>()
 
 ```
 As a result, a tree will be formed in which we can lower "not" to leaves using de Morgan's law, and then apply negation to the specification, which is why we use SpecCondition implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
-
-Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
+__Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)__
 ## Description of aggregate rules
 #### Use declarative fluent api for description
 #### Consider some entity "Matrix" with the following internal structure:
