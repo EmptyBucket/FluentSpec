@@ -32,6 +32,15 @@ new NullSpec<decimal>()
 ```
 As a result, a tree will be formed in which we can lower __not__ to leaves using de Morgan's law, and then apply negation to the specification, which is why we use __SpecCondition__ implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
 __Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)__
+#### __Replace__ the specification base if it does not suit you, or if you want to bring several specifications to the same base for the purpose of their further combination
+```
+new FormulaParsedSpec()
+	.And(new FormulaMaxDepthSpec())
+	.And(new FormulaAllowedSpec())
+	.And(new FormulaHasExistVariablesSpec(excelVariables))
+	.Replace<ParseTreeNode?, string>(ParseFormula);
+```
+In this example, we have replaced __ISpec<ParseTreeNode>__ with __ISpec<string>__
 ## Description of aggregate rules
 #### Consider some root __Matrix__ with the following internal structure:
 * __Matrix__
