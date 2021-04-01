@@ -15,7 +15,7 @@ Specs
 			.And(new StringNotContinuousSpacesSpec())
 			.And(new StringNotEdgeSpaceSpec())
 			.And(new StringMatchSpec("\n").Not()))!))
-	.ThrowIfNotSatisfied(this);
+	.ThrowIfNotSatisfied(matrix);
 
 ```
 
