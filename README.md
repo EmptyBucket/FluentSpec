@@ -60,7 +60,7 @@ Specs
 	.ThrowIfNotSatisfied(matrix);
 
 ```
-* __For__ - grab context for entity T
+* __For__ - grab context for type T
 * __Me__ - define a rule for the captured entity
 * __Member__ - define the rule for the member of the captured entity
 * __Nested__ - traverse the members of the captured entity up to a certain nesting level
