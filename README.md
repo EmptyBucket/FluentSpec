@@ -9,7 +9,7 @@
 6) [Getting a detailed description of the specification violation](https://github.com/EmptyBucket/FluentSpecification#result-of-the-broken-rule-for-matrixsmarttasksweight)
 
 ## Defining your own specifications
-#### Specifications in their most canonical form as described in DDD
+#### Specifications in their most canonical form as described in DDD:
 ```csharp
 public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 {
@@ -21,7 +21,7 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 ```
 "must" and "must_not" are special reserved words that you must use when implicitly using "MustSpecConfition" or use explicit "PredefinedSpecCondition", where you explicitly negate the string literal
 ## Combining specifications
-#### Combine specifications using unions "And", "Or" and apply negation "Not" to them
+#### Combine specifications using unions "And", "Or" and apply negation "Not" to them:
 ```csharp
 new NullSpec<decimal>()
 	.Or(new MinSpec<decimal>(0)
@@ -33,7 +33,7 @@ new NullSpec<decimal>()
 As a result, a tree will be formed in which we can lower "not" to leaves using de Morgan's law, and then apply negation to the specification, which is why we use SpecCondition implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
 __Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)__
 ## Description of aggregate rules
-#### Use declarative fluent api builder for description
+#### Use declarative fluent api builder for description:
 #### Consider some entity "Matrix" with the following internal structure:
 * __Matrix__
 	* __SmartTasks__
