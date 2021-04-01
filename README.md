@@ -3,7 +3,7 @@
 ```
 Specs
 	.For<Matrix>()
-	.Nested(m => m.To(ma => ma.SmartTasks), Specs
+	.Nested(b => b.To(m => m.SmartTasks), Specs
 		.For<SmartTask>()
 		.Member(k => k.Weight, new MoreSpec<decimal>(0).And(new DecimalFractionMaxLengthSpec(2)))
 		.Member(s => s.Name, new StringNotEmptySpec()
