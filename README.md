@@ -1,5 +1,13 @@
 # FluentSpecification
 
+### The tasks that were set for the library:
+1) Save the specifications in the most canonical form, which was described in DDD
+2) Ability to combine specifications using unions and, or and apply negation not to them (as a result, a tree is formed in which we can descend not to leaves, and then apply not to the string literal of the specification, which is why you must use the implicit MustSpecCondition, which obliges to use {must} or {must_not} to invert it later, or explicit PredefinedSpecCondition, where you explicitly negate the string literal)
+3) Provide fluent api to describe aggregate rules
+4) Obtaining a complete list of rules for the aggregate in the form of text (we can do this in view of the fact that we define all the rules declaratively)
+5) Getting a detailed description of the specification violation
+6) Integration with frameworks
+
 ### Defining your own specifications
 ```
 public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
