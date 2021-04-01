@@ -19,6 +19,18 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 }
 
 ```
+## Combining specifications
+```
+new NullSpec<decimal>()
+	.Or(new MinSpec<decimal>(0)
+		.And(new MaxSpec<decimal>(100))
+		.And(new EqualsSpec<decimal>(3).Not()))
+	.Not()
+
+```
+As a result, you will receive a specification that will comply with:
+
+Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
 ## Description of the rules
 #### Consider some entity "Matrix" with the following internal structure:
 * Matrix
