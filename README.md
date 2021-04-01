@@ -140,7 +140,7 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 * ```influenceValue``` - the value that the rule did not pass
 * ```path``` - the path to the property inside the aggregate
 ### You can change the behavior of fundamental things using ```SpecGlobalConfig```
-## Plans:
+## Plans
 * Implement the display of the declaration in the swager, so that you can see all the rules associated with the unit
 * More built-in specs
 ## License
