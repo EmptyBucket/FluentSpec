@@ -1,6 +1,14 @@
 # FluentSpecification
 
-### Declarative description of the rules for the Matrix entity
+### Description of the rules
+##### Consider some entity "Matrix" with the following internal structure
+* Matrix
+	* SmartTasks
+		* Weight
+		* Name
+		* TargetResult
+* Something other
+##### Declarative description of the rules for the "Matrix" entity
 ```
 Specs
 	.For<Matrix>()
@@ -19,8 +27,7 @@ Specs
 	.ThrowIfNotSatisfied(matrix);
 
 ```
-
-### Asp net mvc and Swagger integration
+### ASP.NET MVC and Swagger integration
 ```
 public class Startup
 {
@@ -44,7 +51,11 @@ public class Startup
 			.UseSwagger()
 			.UseSwaggerUI(c => );
 }
-
 ```
-### Result
+### Result of the broken rule for "Matrix.SmartTasks.Weight"
+* specNodeId - error identifier
+* isSatisfiedOn - all the rules associated with the property
+* influenceOn is a broken rule
+* influenceValue The value that the rule did not pass
+* path - the path to the property inside the aggregate
 ![Result](https://i.imgur.com/oPbCRpT.jpg)
