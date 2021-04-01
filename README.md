@@ -135,7 +135,7 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 ![Result](https://i.imgur.com/oPbCRpT.jpg)
 
 * ```specNodeId``` - error identifier
-* ```isSatisfiedOn``` - all the rules associated with the property
+* ```isSatisfiedOn``` - all the rules associated with the context
 * ```influenceOn``` - is a broken rule
 * ```influenceValue``` - the value that the rule did not pass
 * ```path``` - the path to the property inside the aggregate
