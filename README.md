@@ -19,7 +19,7 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 	public override SpecCondition IsSatisfiedOn => $"Depth {must_not} exceed 64";
 }
 ```
-__must__ and __must_not__ are special reserved words that you must use when implicitly using "MustSpecConfition" or use explicit __PredefinedSpecCondition__, where you explicitly negate the string literal
+__must__ and __must_not__ are special reserved words that you must use when implicitly using __MustSpecConfition__ or use explicit __PredefinedSpecCondition__, where you explicitly negate the string literal
 ## Combining specifications
 #### Combine specifications using unions __And__, __Or__ and apply negation __Not__ to them:
 ```csharp
