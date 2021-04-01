@@ -2,7 +2,7 @@
 
 ## The tasks that were set for the library:
 1) Save the specifications in the most canonical form, which was described in DDD
-2) Ability to combine specifications using unions and, or and apply negation not to them (as a result, a tree is formed in which we can descend not to leaves, and then apply not to the string literal of the specification, which is why you must use the implicit MustSpecCondition, which obliges to use {must} or {must_not} to invert it later, or explicit PredefinedSpecCondition, where you explicitly negate the string literal)
+2) Ability to combine specifications using unions and, or and apply negation not to them
 3) Provide fluent api to describe aggregate rules
 4) Obtaining a complete list of rules for the aggregate in the form of text (we can do this in view of the fact that we define all the rules declaratively)
 5) Integration with frameworks
@@ -28,7 +28,7 @@ new NullSpec<decimal>()
 	.Not()
 
 ```
-As a result, you will receive a specification that will comply with:
+As a result, a tree is formed in which we can descend not to leaves, and then apply not to the string literal of the specification, which is why you must use the implicit MustSpecCondition, which obliges to use {must} or {must_not} to invert it later, or explicit PredefinedSpecCondition, where you explicitly negate the string literal. You will receive a specification that will comply with:
 
 Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
 ## Description of aggregate rules
