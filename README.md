@@ -141,7 +141,7 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 * ```path``` - the path to the property inside the aggregate
 ### You can change the behavior of fundamental things using ```SpecGlobalConfig```
 ## Plans
-* Implement the display of the declaration in the swager, so that you can see all the rules associated with the unit
+* Implement the display of the declaration in the swager, so that you can see all the rules associated with the aggregate
 * More built-in specs
 ## License
 
