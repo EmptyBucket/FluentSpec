@@ -31,7 +31,7 @@ new NullSpec<decimal>()
 As a result, you will receive a specification that will comply with:
 
 Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
-## Description of the rules
+## Description of aggregate rules
 #### Consider some entity "Matrix" with the following internal structure:
 * Matrix
 	* SmartTasks
