@@ -125,11 +125,11 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 #### Result of the broken rule for "Matrix.SmartTasks.Weight":
 ![Result](https://i.imgur.com/oPbCRpT.jpg)
 
-* "specNodeId" - error identifier
-* "isSatisfiedOn" - all the rules associated with the property
-* "influenceOn" - is a broken rule
-* "influenceValue" - the value that the rule did not pass
-* "path" - the path to the property inside the aggregate
+* __specNodeId__ - error identifier
+* __isSatisfiedOn__ - all the rules associated with the property
+* __influenceOn__ - is a broken rule
+* __influenceValue__ - the value that the rule did not pass
+* __path__ - the path to the property inside the aggregate
 ### You can change the behavior of fundamental things using "SpecGlobalConfig"
 ## License
 
