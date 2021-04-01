@@ -18,7 +18,7 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 	public override SpecCondition IsSatisfiedOn => $"Depth {must_not} exceed 64";
 }
 ```
-"must" and "must_not" are special reserved words that you must use when implicitly using MustSpecConfition
+"must" and "must_not" are special reserved words that you must use when implicitly using "MustSpecConfition"
 ## Combining specifications
 ```
 new NullSpec<decimal>()
@@ -28,7 +28,7 @@ new NullSpec<decimal>()
 	.Not()
 
 ```
-As a result, a tree is formed in which we can descend not to leaves, and then apply not to the string literal of the specification. Therefore, within your specifications, you must use an implicit MustSpecCondition, which obliges to use {must} or {must_not} to invert it, or explicit PredefinedSpecCondition, where you explicitly negate the string literal. You will receive a specification that will comply with:
+As a result, a tree is formed in which we can descend "not" to leaves, and then apply "not" to the string literal of the specification. Therefore, within your specifications, you must use an implicit "MustSpecCondition", which obliges to use "{must}" or "{must_not}" to invert it, or explicit "PredefinedSpecCondition", where you explicitly negate the string literal. You will receive a specification that will comply with:
 
 Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
 ## Description of aggregate rules
@@ -119,9 +119,9 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 #### Result of the broken rule for "Matrix.SmartTasks.Weight":
 ![Result](https://i.imgur.com/oPbCRpT.jpg)
 
-* specNodeId - error identifier
-* isSatisfiedOn - all the rules associated with the property
-* influenceOn - is a broken rule
-* influenceValue - the value that the rule did not pass
-* path - the path to the property inside the aggregate
-## You can change the behavior of fundamental things using SpecGlobalConfig
+* "specNodeId" - error identifier
+* "isSatisfiedOn" - all the rules associated with the property
+* "influenceOn" - is a broken rule
+* "influenceValue" - the value that the rule did not pass
+* "path" - the path to the property inside the aggregate
+### You can change the behavior of fundamental things using "SpecGlobalConfig"
