@@ -30,7 +30,7 @@ new NullSpec<decimal>()
 	.Not()
 
 ```
-As a result, a tree will be formed in which we can lower ```not``` to leaves using de Morgan's law, and then apply negation to the specification, which is why we use ```SpecCondition``` implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
+As a result, a tree will be formed in which we can lower _not_ to leaves using de Morgan's law, and then apply negation to the specification, which is why we use ```SpecCondition``` implementations instead of ordinary strings - they know how to build their negation. You will receive a specification that will comply with:
 __Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)__
 #### ```Replace``` the specification base if it does not suit you, or if you want to bring several specifications to the same base for the purpose of their further combination
 ```csharp
@@ -49,7 +49,7 @@ In this example, we have replaced ```ISpec<ParseTreeNode>``` with ```ISpec<strin
 		* __Name__
 		* __TargetResult__
 * __Something other__
-#### Use declarative fluent api builder for description of the rules for the __Matrix__ root:
+#### Use declarative fluent api builder for description of the rules for the ```Matrix``` root:
 ```csharp
 Specs
 	.For<Matrix>()
@@ -68,7 +68,7 @@ Specs
 	.ThrowIfNotSatisfied(matrix);
 
 ```
-* ```For``` - grab context for T root
+* ```For``` - grab context for ```T``` root
 * ```Me``` - define a rule for the captured root
 * ```Member``` - define the rule for the member of the captured root
 * ```Nested``` - traverse the members of the captured root up to a certain nesting level
@@ -131,7 +131,7 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 	.AddBoth(typeof(StringMatchSpec), 3, 4);
 
 ```
-#### Result of the broken rule for __Matrix.SmartTasks.Weight__:
+#### Result of the broken rule for ```Matrix.SmartTasks.Weight```:
 ![Result](https://i.imgur.com/oPbCRpT.jpg)
 
 * ```specNodeId``` - error identifier
@@ -139,7 +139,7 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 * ```influenceOn``` - is a broken rule
 * ```influenceValue``` - the value that the rule did not pass
 * ```path``` - the path to the property inside the aggregate
-### You can change the behavior of fundamental things using __SpecGlobalConfig__
+### You can change the behavior of fundamental things using ```SpecGlobalConfig```
 ## License
 
 ```
