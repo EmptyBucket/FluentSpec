@@ -60,7 +60,7 @@ Specs
 	.ThrowIfNotSatisfied(matrix);
 
 ```
-* __For__ - grab context for type T
+* __For__ - grab context for root T
 * __Me__ - define a rule for the captured root
 * __Member__ - define the rule for the member of the captured root
 * __Nested__ - traverse the members of the captured root up to a certain nesting level
