@@ -1,14 +1,15 @@
 # FluentSpecification
 
 #### The tasks that were set for the library:
-1) Save the specifications in the most canonical form, which was described in DDD
-2) Ability to combine specifications using unions and, or and apply negation not to them
-3) Provide fluent api to describe aggregate rules
-4) Obtaining a complete list of rules for the aggregate in the form of text
-5) Integration with frameworks
-6) Getting a detailed description of the specification violation
+1) [Defining your own specifications](https://github.com/EmptyBucket/FluentSpecification#defining-your-own-specifications)
+2) [Combining specifications](https://github.com/EmptyBucket/FluentSpecification#combining-specifications)
+3) [Description of aggregate rules](https://github.com/EmptyBucket/FluentSpecification#description-of-aggregate-rules)
+4) [Getting a declaration - a list of rules](https://github.com/EmptyBucket/FluentSpecification#getting-a-declaration---a-list-of-rules)
+5) [ASP.NET MVC and Swagger integration](https://github.com/EmptyBucket/FluentSpecification#aspnet-mvc-and-swagger-integration)
+6) [Getting a detailed description of the specification violation](https://github.com/EmptyBucket/FluentSpecification#result-of-the-broken-rule-for-matrixsmarttasksweight)
 
 ## Defining your own specifications
+#### Specifications in their most canonical form as described in DDD
 ```csharp
 public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 {
@@ -20,6 +21,7 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 ```
 "must" and "must_not" are special reserved words that you must use when implicitly using "MustSpecConfition"
 ## Combining specifications
+#### Combine specifications using unions and, or and apply negation not to them
 ```csharp
 new NullSpec<decimal>()
 	.Or(new MinSpec<decimal>(0)
@@ -32,6 +34,7 @@ As a result, a tree is formed in which we can descend "not" to leaves, and then 
 
 Value must not be null and (Value must inferior 0 or Value must exceed 100 or Value must be equals 3)
 ## Description of aggregate rules
+#### Use declarative fluent api for description
 #### Consider some entity "Matrix" with the following internal structure:
 * Matrix
 	* SmartTasks
