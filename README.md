@@ -59,7 +59,6 @@ Specs
 
 ```
 ## Getting a declaration - a list of rules
-We can do this in view of the fact that we define all the rules declaratively
 ```
 Specs
 	.For<Matrix>()
@@ -77,6 +76,7 @@ Specs
 			.And(new StringMatchSpec("\n").Not()))!))
 	.Select(i => i.GetDeclaration())
 ```
+We can do this in view of the fact that we define all the rules declaratively
 ## ASP.NET MVC and Swagger integration
 #### Connecting integration in your startup
 ```
