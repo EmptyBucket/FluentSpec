@@ -1,6 +1,6 @@
 # FluentSpecification
 
-### The tasks that were set for the library:
+## The tasks that were set for the library:
 1) Save the specifications in the most canonical form, which was described in DDD
 2) Ability to combine specifications using unions and, or and apply negation not to them (as a result, a tree is formed in which we can descend not to leaves, and then apply not to the string literal of the specification, which is why you must use the implicit MustSpecCondition, which obliges to use {must} or {must_not} to invert it later, or explicit PredefinedSpecCondition, where you explicitly negate the string literal)
 3) Provide fluent api to describe aggregate rules
@@ -8,7 +8,7 @@
 5) Getting a detailed description of the specification violation
 6) Integration with frameworks
 
-### Defining your own specifications
+## Defining your own specifications
 ```
 public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 {
@@ -19,15 +19,15 @@ public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
 }
 
 ```
-### Description of the rules
-##### Consider some entity "Matrix" with the following internal structure:
+## Description of the rules
+#### Consider some entity "Matrix" with the following internal structure:
 * Matrix
 	* SmartTasks
 		* Weight
 		* Name
 		* TargetResult
 * Something other
-##### Declarative description of the rules for the "Matrix" entity:
+#### Declarative description of the rules for the "Matrix" entity:
 ```
 Specs
 	.For<Matrix>()
@@ -46,7 +46,7 @@ Specs
 	.ThrowIfNotSatisfied(matrix);
 
 ```
-### ASP.NET MVC and Swagger integration
+## ASP.NET MVC and Swagger integration
 #### Connecting integration in your startup
 ```
 public class Startup
