@@ -118,7 +118,7 @@ public class Startup
 			.UseSwaggerUI(c => );
 }
 ```
-#### Comparison of errors and their codes (All specs built into the library are already mapped into native codes):
+#### Comparison of errors and their codes (all specs built into the library are already mapped into native codes):
 ```csharp
 SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMapBuilder
 	.StartFrom(10, b => b
