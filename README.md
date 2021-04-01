@@ -1,6 +1,6 @@
 # FluentSpecification
 
-## The tasks that were set for the library:
+#### The tasks that were set for the library:
 1) Save the specifications in the most canonical form, which was described in DDD
 2) Ability to combine specifications using unions and, or and apply negation not to them
 3) Provide fluent api to describe aggregate rules
@@ -124,3 +124,4 @@ SpecGlobalConfig.DefaultSpecNodeMapBuilder = SpecGlobalConfig.DefaultSpecNodeMap
 * influenceOn - is a broken rule
 * influenceValue - the value that the rule did not pass
 * path - the path to the property inside the aggregate
+## You can change the behavior of fundamental things using SpecGlobalConfig
