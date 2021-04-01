@@ -1,5 +1,16 @@
 # FluentSpecification
 
+### Defining your own specifications
+```
+public class FormulaMaxDepthSpec : CompositeSpecLeaf<ParseTreeNode>
+{
+	public override bool IsSatisfiedBy(ParseTreeNode value) =>
+		new FormulaAnalyzer(value).OperatorDepth(ExcelFormula.AllowedNamedFunctions) <= 65;
+
+	public override SpecCondition IsSatisfiedOn => $"Depth {must_not} exceed 64";
+}
+
+```
 ### Description of the rules
 ##### Consider some entity "Matrix" with the following internal structure:
 * Matrix
