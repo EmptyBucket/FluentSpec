@@ -9,6 +9,7 @@
         <Authors>Alexey Politov</Authors>
         <PackageDescription>Canonical specifications with a declarative description of the rules for the aggregate, as well as integration with popular frameworks</PackageDescription>
         <RepositoryUrl>https://github.com/EmptyBucket/FluentSpecification</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
