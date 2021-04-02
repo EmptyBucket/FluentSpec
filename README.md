@@ -6,7 +6,7 @@
 4) [Getting a declaration - a list of rules](https://github.com/EmptyBucket/FluentSpecification#getting-a-declaration---a-list-of-rules)
 5) [ASP.NET MVC and Swagger integration](https://github.com/EmptyBucket/FluentSpecification#aspnet-mvc-and-swagger-integration)
 6) [Getting a detailed description of the specification violation](https://github.com/EmptyBucket/FluentSpecification#result-of-the-broken-rule-for-matrixsmarttasksweight)
-## Nuget:
+#### Nuget:
 * https://www.nuget.org/packages/DDD.FluentSpecification/
 * https://www.nuget.org/packages/DDD.FluentSpecification.AspNet/
 * https://www.nuget.org/packages/DDD.FluentSpecification.Swagger/
