@@ -1,5 +1,5 @@
 # FluentSpecification
-##Nuget:
+## Nuget:
 * https://www.nuget.org/packages/EmptyBucket.FluentSpecification/
 * https://www.nuget.org/packages/EmptyBucket.FluentSpecification.AspNet/
 * https://www.nuget.org/packages/EmptyBucket.FluentSpecification.Swagger/
