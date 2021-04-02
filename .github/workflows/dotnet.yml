@@ -2,10 +2,10 @@ name: CI
 
 env:
   GITHUB_FEED: https://nuget.pkg.github.com/EmptyBucket/index.json
-  GITHUB_USER: EmptyBucket
   GITHUB_KEY: ${{ secrets.FLUENTSPECIFICATION_GITHUB_PAT }}
 
   NUGET_FEED: https://api.nuget.org/v3/index.json
+  NUGET_KEY: ${{ secrets.FLUENTSPECIFICATION_NUGET_PAT }}
 
 on:
   push:
@@ -33,4 +33,11 @@ jobs:
         for f in ./packages/*.nupkg
         do
           dotnet nuget push $f -s $GITHUB_FEED -k $GITHUB_KEY --skip-duplicate
+        done
+        
+    - name: Push to Nuget Feed
+      run: |
+        for f in ./packages/*.nupkg
+        do
+          dotnet nuget push $f -s $NUGET_FEED -k $NUGET_KEY --skip-duplicate
         done
