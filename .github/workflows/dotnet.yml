@@ -31,5 +31,5 @@ jobs:
       run: |
         for f in ./packages/*.nupkg
         do
-          dotnet push @$f -s $GITHUB_FEED -k $FLUENTSPECIFICATION_GITHUB_PAT --skip-dubplicate
+          dotnet nuget push @$f -s $GITHUB_FEED -k $FLUENTSPECIFICATION_GITHUB_PAT --skip-dubplicate
         done
