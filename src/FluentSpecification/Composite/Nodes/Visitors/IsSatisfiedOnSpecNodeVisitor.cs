@@ -70,7 +70,7 @@ namespace FluentSpecification.Composite.Nodes.Visitors
 			_not = false;
 			base.Visit(wrappedSpecNode);
 			_isSatisfiedOns.Push(takenNot
-				? wrappedSpecNode.Spec.IsSatisfiedOn.Not()
+				? wrappedSpecNode.Spec.IsSatisfiedOn.Not().ToString()
 				: wrappedSpecNode.Spec.IsSatisfiedOn.ToString());
 		}
 

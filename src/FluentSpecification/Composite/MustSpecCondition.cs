@@ -44,9 +44,12 @@ namespace FluentSpecification.Composite
 					$"{nameof(SpecSpecialKeyword.must)} or {nameof(SpecSpecialKeyword.must_not)} special keyword");
 		}
 
-		public override string Not() => _origin
-			.Replace(SpecSpecialKeyword.must, SpecGlobalConfig.MustNotReplacement)
-			.Replace(SpecSpecialKeyword.must_not, SpecGlobalConfig.MustReplacement);
+		public override SpecCondition Not()
+		{
+			var _ = TryReplaceSingle(_origin, SpecSpecialKeyword.must, SpecSpecialKeyword.must_not, out var not) ||
+			        TryReplaceSingle(_origin, SpecSpecialKeyword.must_not, SpecSpecialKeyword.must, out not);
+			return new MustSpecCondition(not);
+		}
 
 		public override string ToString() => _human;
 

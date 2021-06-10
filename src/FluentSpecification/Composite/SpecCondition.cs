@@ -27,7 +27,7 @@ namespace FluentSpecification.Composite
 {
 	public abstract class SpecCondition
 	{
-		public abstract string Not();
+		public abstract SpecCondition Not();
 
 		public abstract override string ToString();
 

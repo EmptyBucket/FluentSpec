@@ -30,8 +30,8 @@ namespace FluentSpecification.Composite
 
 		public PredefinedSpecCondition(string isSatisfiedOn, string notIsSatisfiedOn) =>
 			(_isSatisfiedOn, _notIsSatisfiedOn) = (isSatisfiedOn, notIsSatisfiedOn);
-		
-		public override string Not() => _notIsSatisfiedOn;
+
+		public override SpecCondition Not() => new PredefinedSpecCondition(_notIsSatisfiedOn, _isSatisfiedOn);
 
 		public override string ToString() => _isSatisfiedOn;
 	}
