@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification", "FluentSpecification\FluentSpecification.csproj", "{32D9D604-8EF9-4884-8953-ECAFB711BA58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification", "src\FluentSpecification\FluentSpecification.csproj", "{32D9D604-8EF9-4884-8953-ECAFB711BA58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification.AspNet", "FluentSpecification.AspNet\FluentSpecification.AspNet.csproj", "{055786D1-ED18-46CC-B571-FA0331AE2AC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification.AspNet", "src\FluentSpecification.AspNet\FluentSpecification.AspNet.csproj", "{055786D1-ED18-46CC-B571-FA0331AE2AC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification.Swagger", "FluentSpecification.Swagger\FluentSpecification.Swagger.csproj", "{66D65DFA-8075-49DB-BD0B-E1D80ED10B90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSpecification.Swagger", "src\FluentSpecification.Swagger\FluentSpecification.Swagger.csproj", "{66D65DFA-8075-49DB-BD0B-E1D80ED10B90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
