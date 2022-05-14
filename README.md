@@ -1,4 +1,5 @@
 # FluentSpecification
+Canonical specifications with a declarative description of the rules for the aggregate, as well as integration with popular frameworks
 #### The tasks that were set for the library:
 1) [Defining your own specifications](https://github.com/EmptyBucket/FluentSpecification#defining-your-own-specifications)
 2) [Combining specifications](https://github.com/EmptyBucket/FluentSpecification#combining-specifications)
