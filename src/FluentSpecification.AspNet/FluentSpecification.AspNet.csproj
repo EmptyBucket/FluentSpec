@@ -5,11 +5,12 @@
         <LangVersion>8.0</LangVersion>
         <Nullable>enable</Nullable>
         <PackageId>ap.Specification.AspNet</PackageId>
-        <Version>1.0.2</Version>
+        <Version>1.0.3</Version>
         <Authors>Alexey Politov</Authors>
         <PackageDescription>Canonical specifications with a declarative description of the rules for the aggregate, as well as integration with popular frameworks</PackageDescription>
         <RepositoryUrl>https://github.com/EmptyBucket/FluentSpecification</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>icon.png</PackageIcon>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,4 +22,8 @@
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="..\..\icon.png" Visible="false" Pack="true" PackagePath="">
+        </None>
+    </ItemGroup>
 </Project>
