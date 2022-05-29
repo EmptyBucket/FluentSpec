@@ -1,4 +1,5 @@
 # FluentSpecification
+Canonical specifications with a declarative description of the rules for the aggregate, as well as integration with popular frameworks
 #### The tasks that were set for the library:
 1) [Defining your own specifications](https://github.com/EmptyBucket/FluentSpecification#defining-your-own-specifications)
 2) [Combining specifications](https://github.com/EmptyBucket/FluentSpecification#combining-specifications)
@@ -7,9 +8,9 @@
 5) [ASP.NET MVC and Swagger integration](https://github.com/EmptyBucket/FluentSpecification#aspnet-mvc-and-swagger-integration)
 6) [Getting a detailed description of the specification violation](https://github.com/EmptyBucket/FluentSpecification#result-of-the-broken-rule-for-matrixsmarttasksweight)
 #### Nuget:
-* https://www.nuget.org/packages/DDD.FluentSpecification/
-* https://www.nuget.org/packages/DDD.FluentSpecification.AspNet/
-* https://www.nuget.org/packages/DDD.FluentSpecification.Swagger/
+* https://www.nuget.org/packages/ap.Specification/
+* https://www.nuget.org/packages/ap.Specification.AspNet/
+* https://www.nuget.org/packages/ap.Specification.Swagger/
 ## Defining your own specifications
 #### Specifications in their most canonical form as described in DDD:
 ```csharp
