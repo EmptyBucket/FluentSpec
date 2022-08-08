@@ -5,7 +5,7 @@
         <LangVersion>8.0</LangVersion>
         <Nullable>enable</Nullable>
         <PackageId>ap.Specification</PackageId>
-        <Version>1.0.3</Version>
+        <Version>1.0.4</Version>
         <Authors>Alexey Politov</Authors>
         <PackageDescription>Canonical specifications with a declarative description of the rules for the aggregate, as well as integration with popular frameworks</PackageDescription>
         <RepositoryUrl>https://github.com/EmptyBucket/FluentSpecification</RepositoryUrl>
